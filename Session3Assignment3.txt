@@ -1,0 +1,7 @@
+Write the code to Turn a collection into a RDD and perform map operation on it to cube
+every number and filter the number which are divided by two and three.
+
+val rdd = sc.parallelize(List(1,2,3,4,5,6))
+val rdd1 = rdd.map(x => x*x*x)
+val rdd2 = rdd1.filter(x => (x%2==0 && x%3==0)) 
+rdd2.collect
